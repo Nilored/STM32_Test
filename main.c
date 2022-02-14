@@ -2,7 +2,7 @@
 
 void RCC_INI(){
 	RCC->CR |= RCC_CR_HSEON;
-	while(READ_BIT(RCC->RC, RCC_CR_HSERDY) == ) {}
+	while(READ_BIT(RCC->CR, RCC_CR_HSERDY) == 0) {}
 
 
 
