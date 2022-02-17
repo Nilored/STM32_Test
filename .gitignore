@@ -1,0 +1,4 @@
+system_stm32f4xx.c
+stm32f4xx_it.c
+stm32f4xx_hal_msp.c
+.gitattributes
