@@ -42,7 +42,7 @@ void RCC_INI(){
 	MODIFY_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLSRC, RCC_PLLCFGR_PLLSRC_HSE);		//Тактирование PLL от HSE
 	//PLLI2S------------------------------------------------------------------------------------------------
 	MODIFY_REG(RCC->PLLI2SCFGR, RCC_PLLI2SCFGR_PLLI2SN, 0x180U << RCC_PLLI2SCFGR_PLLI2SN_Pos);  	// *N = 384
-	MODIFY_REG(RCC->PLLI2SCFGR, RCC_PLLI2SCFGR_PLLI2SR, 0x2U << RCC_PLLI2SCFGR_PLLI2SR_Pos);  	// *N = 384
+	MODIFY_REG(RCC->PLLI2SCFGR, RCC_PLLI2SCFGR_PLLI2SR, 0x2U << RCC_PLLI2SCFGR_PLLI2SR_Pos);  	// /R = 2
 	//------------------------------------------------------------------------------------------------------
 	SET_BIT(RCC->CR, RCC_CR_PLLON);							//Включить PLL
 	while(READ_BIT(RCC->CR, RCC_CR_PLLRDY) != RESET) {}				//Дождаться PLL
